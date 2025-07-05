@@ -1,32 +1,255 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nolan Ratsabouth</title>
-        <link rel="stylesheet" href="/styles.css">
-        <script src="/script.js" defer></script>
-    </head>
-    
-    <body>
-        <div class="nav-bar">
-            <ul id="navbar">
-                <li class="navbar-listitems"><a href="#links">Contact</a></li>
-                <li class="navbar-listitems"><a href="/pages/projects.html">Projects</a></li>
-                <li class="navbar-listitems"><a href="/pages/experience.html">Experience</a></li>
-                <li class="navbar-listitems"><a href="/pages/about-me.html">About Me</a></li>
-                <li class="navbar-listitems"><a href="/pages/home.html">Home</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nolan Ratsabouth</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="/pages/home.html" class="navbar-brand">Nolan Ratsabouth</a>
+      </div>
+      <div class="navbar-right">
+        <ul id="navbar">
+          <li class="navbar-listitems"><a href="#links">Contact</a></li>
+          <li class="navbar-listitems">
+            <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+              <span class="theme-icon">🌙</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
         </div>
-        <!-- Special intro code -->
-        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
-        <h1 id="top-header"></h1>
         
-        <div class="links"  id="links">
-            <a href="https://www.linkedin.com/in/nolan-ratsabouth-2a5863264/" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin-black-logo-icon.png" width="55px"></a>
-            <a href="https://github.com/nolanrats" target="_blank" rel="noopener noreferrer"><img src="/images/github-logo.png" width="55px"></a>
-            <a href="https://docs.google.com/document/d/1Q-3r7VDYK3HCV-_s-PR0RPxDjb2c3PEhohcDcPmU1qI/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><img src="/images/resume.png" width="55px"></a>
-            <a href="mailto:ratsanolan14@gmail.com"><img src="/images/email-icon.png" width="55px" id="email-link"></a>
+        <div class="hero-content">
+            <div class="hero-intro">
+                <h1 class="hero-greeting">Hello, I'm</h1>
+                <div class="console-container">
+                    <h3>
+                        <span id="text"></span>
+                        <div class="console-underscore" id="console">&#95;</div>
+                    </h3> 
+                </div>
+            </div>
+
+            <div class="hero-subheading">
+                <p id="subheading">Aspiring software engineer at UTD!</p>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="#about-me-header" class="cta-button">Learn More</a>
+            </div>
         </div>
-    </body>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+      <section class="content-section about-me">
+        <h2 id="about-me-header">About Me</h2>
+        <div class="about-content">
+          <img
+            src="/images/profile-pic.png"
+            alt="Nolan Ratsabouth"
+            id="profile-pic"
+          />
+          <div class="bio-text">
+            <p id="bio">
+              Hi! I'm Nolan. This fall, I'll be a rising junior at The University of Texas at Dallas
+              studying Computer Science. I will be graduating in May 2027. I love the
+              satisfaction of solving problems related to computers and programming.
+              Whether it be front-end, back-end, or full-stack, I'm currently looking
+              for an internship in the field of software engineering. I enjoy playing
+              tennis, working out, and am currently obsessed with the Nintendo 3DS (Switch next??).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section experience">
+        <h2 id="experience-header">Experience</h2>
+        <div class="experience-item">
+          <h3>Pioneer Natural Resources</h3>
+          <p class="job-title">Supply Chain Management Intern</p>
+          <p class="job-date"><em>May 2023 - August 2023</em></p>
+          <p class="job-description">
+            During my internship at Pioneer Natural Resources, I worked with the
+            Supply Chain Management team to help manage the company's inventory and
+            logistics. I also worked on a project to help automate the process of
+            tracking supplier contracts and contact information.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section projects">
+        <h2 id="projects-header">Projects</h2>
+        
+        <div class="project-categories">
+          <button class="category-btn active" data-category="all">All Projects</button>
+          <button class="category-btn" data-category="personal">Personal</button>
+          <button class="category-btn" data-category="school">School</button>
+        </div>
+        
+        <div class="projects-grid">
+          <div class="project-item" data-category="personal">
+            <div class="project-header">
+              <h3>Upcoming Project - Tennis Shot Classifier</h3>
+              <div class="project-links">
+                <a href="https://github.com/nolanrats/tennis-shot-classifier" target="_blank" class="github-link" title="View on GitHub">
+                  <img src="/images/github-logo.png" alt="GitHub" />
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Developing a computer vision tool to classify tennis shots (forehand, backhand, serve)
+              using pose estimation and machine learning. Currently extracting pose keypoints from video input;
+              model training in progress.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Machine Learning</span>
+            </div>
+          </div>
+          
+          <div class="project-item" data-category="personal">
+            <div class="project-header">
+              <h3>Eye Dropper Chrome Extension</h3>
+              <div class="project-links">
+                <a href="https://github.com/nolanrats/eye-dropper-extension" target="_blank" class="github-link" title="View on GitHub">
+                  <img src="/images/github-logo.png" alt="GitHub" />
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              This is a Chrome extension I created to help ease the process of
+              finding the hex code of a color on a website.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Chrome Extension</span>
+              <span class="project-tag">CSS</span>
+            </div>
+          </div>
+          
+          <div class="project-item" data-category="personal">
+            <div class="project-header">
+              <h3>Personal Portfolio</h3>
+              <div class="project-links">
+                <a href="https://github.com/nolanrats/Personal-Portfolio" target="_blank" class="github-link" title="View on GitHub">
+                  <img src="/images/github-logo.png" alt="GitHub" />
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              You're looking at it! I used HTML, CSS and JavaScript to create this
+              portfolio website showcasing my skills and experience. I'm currently
+              working on adding more projects to the website.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+          
+          <div class="project-item" data-category="school">
+            <div class="project-header">
+              <h3>ANTLR Parser and Formatter</h3>
+            </div>
+            <p class="project-description">
+                A comprehensive parser and formatter built for COSC 30403 (Programming Language Concepts @ TCU).
+                Features include a parser that can parse a given grammar and generate a parse tree,
+                a formatter that can format the parse tree into a more readable format, and a lexer that can
+                tokenize the input.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Scala</span>
+              <span class="project-tag">Java</span>
+            </div>
+          </div>
+
+          <div class="project-item" data-category="school">
+            <div class="project-header">
+              <h3>ARM64 Assembly Array Processor</h3>
+              <div class="project-links">
+              </div>
+            </div>
+            <p class="project-description">
+                Designed and implemented an ARM64 assembly program for COSC 30253 (Computer Organization @ TCU)
+                that creates, copies, sorts, and averages dynamic arrays using low-level memory and stack management techniques.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">ARM 64 Assembly</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer" id="links">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Connect With Me</h3>
+          <p>Let's work together on something amazing!</p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/nolan-ratsabouth-2a5863264/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            title="LinkedIn"
+          >
+            <img src="/images/linkedin-black-logo-icon.png" alt="LinkedIn" />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/nolanrats"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            title="GitHub"
+          >
+            <img src="/images/github-logo.png" alt="GitHub" />
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1_Ykwn6LHZ3kZD9BhaEb_6zewvhtEGagq/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            title="Resume"
+          >
+            <img src="/images/resume.png" alt="Resume" />
+            <span>Resume</span>
+          </a>
+          <a 
+            href="mailto:ratsanolan14@gmail.com"
+            class="social-link"
+            title="Email"
+          >
+            <img src="/images/email-icon.png" alt="Email" />
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nolan Ratsabouth. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
